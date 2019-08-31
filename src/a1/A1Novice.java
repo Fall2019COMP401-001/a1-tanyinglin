@@ -8,7 +8,6 @@ public class A1Novice
 	public static void main(String[] args) {
 		
 		Scanner scan = new Scanner(System.in);
-
 		// Your code follows here.
 		int numCustomers = scan.nextInt();
 		
@@ -21,9 +20,11 @@ public class A1Novice
 			{
 				int number = scan.nextInt();
 				scan.next();
+				String.format("%.2f", total);
 				total = total + number * scan.nextDouble();
 			}
-			System.out.println(name + ":" + " " + total);
+			System.out.println(name + ":" + " " + String.format("%.2f", total));
+
 			//System.out.print(total);
 			
 		}
