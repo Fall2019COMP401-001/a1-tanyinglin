@@ -31,23 +31,30 @@ public class A1Jedi
 			scan.next();
 			scan.next();
 			int howManyItems = scan.nextInt();
-			for(int j = 0; j<howManyItems; j++)
-			{
-				int howManyThis = scan.nextInt();
-				String brandName = scan.next();
-				for(int k = 0; k <totalAmount; k++)
+			boolean[] ifBought = new boolean[totalAmount];
+				for(int j = 0; j<howManyItems; j++)
 				{
 					
-					if(brandName.equals(brands[k]))
+					int howManyThis = scan.nextInt();
+					String brandName = scan.next();
+						for(int k = 0; k <totalAmount; k++)
 					{
-						//index = k;
-						//timesCustomers[k] = timesCustomers[k] + howManyThis;
-						timesCustomers[k]++;
-						timesItems[k]= timesItems[k] + howManyThis;
+						
+						if(brandName.equals(brands[k]))
+						{
+							timesItems[k]= timesItems[k] + howManyThis;
+							if(!ifBought[k])
+							{
+								timesCustomers[k]++;
+								ifBought[k]=true;
+							
+						    }
+						
 					}
+					
 				}
-				
 			}
+			
 		}
 		for(int i = 0; i < totalAmount; i++)
 		{
