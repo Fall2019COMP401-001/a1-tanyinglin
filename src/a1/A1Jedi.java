@@ -52,9 +52,9 @@ public class A1Jedi
 		for(int i = 0; i < totalAmount; i++)
 		{
 			if(timesItems[i]==0)
-				System.out.println("NO Customers bought " + brands[i]);
+				System.out.println("No customers bought " + brands[i]);
 			else
-				System.out.println(timesCustomers[i]+" "+"Customers bought "+timesItems[i]+" "+brands[i]);
+				System.out.println(timesCustomers[i]+" "+"customers bought "+timesItems[i]+" "+brands[i]);
 		}
 	}
 
